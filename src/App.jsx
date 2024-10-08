@@ -1,13 +1,23 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import './assets/css/app.css';
+import Memberlist from "./components/Memberlist";
 import React from "react";
 
-function App () {
+const App = () => {
+  const bandmembers = [
+    {name: "Steven Madali", role: "Rhythm Guitar"},
+    {name: "Francis Carl Lingan", role: "Lead Guitar"},
+    {name: "Trisha Malate", role: "Bass Guitar"},
+    {name: "Gideon Paul", role: "Drums"},
+  ];
+
   return (
-    <main>
-      <Navbar/>
-    </main>
+  <>
+  <Navbar />
+  <Hero/>
+  <Memberlist members={bandmembers} />
+  </>
   );
 }
 
